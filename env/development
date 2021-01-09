@@ -1,0 +1,6 @@
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=db_cubaleon_dev
+DB_USERNAME=cubaleon_dev
+DB_PASSWORD=cubaleon_dev
+DB_DRIVER=mysql

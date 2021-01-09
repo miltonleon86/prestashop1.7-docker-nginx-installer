@@ -1,0 +1,22 @@
+version: '3.4'
+
+networks:
+  cubaleon:
+    external:
+      name: proxy_cubaleon
+
+services:
+  php_prestashop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-prestashop
+    restart: always
+    networks:
+      - cubaleon
+    volumes:
+      - .:/usr/share/prestashop
+    env_file:
+      - env/development
+    environment:
+      - VIRTUAL_HOST=prestashop.cuba-web.develop
