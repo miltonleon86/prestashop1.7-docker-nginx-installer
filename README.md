@@ -1,4 +1,4 @@
-#Prestashop - Docker - Nginx - PHP7.2
+# Prestashop - Docker - Nginx - PHP7.2
 * Mysql DB should be in a external container or host. 
 
 * If you have any issue with permissions just do this:
