@@ -35,6 +35,6 @@ sudo chmod -R 777 prestashop/
 
 * change name from admin folder to admins.
 
-#Important
+# Important
 * This still a work in progress. 
 * Any help is welcome. 
