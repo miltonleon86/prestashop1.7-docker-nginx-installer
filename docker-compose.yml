@@ -19,6 +19,6 @@ services:
     env_file:
       - env/development
     environment:
-      - VIRTUAL_HOST=test.cuba-web.com,www.test.cuba-web.com
-      - LETSENCRYPT_HOST=test.cuba-web.com,www.test.cuba-web.com
+      - VIRTUAL_HOST=tienda.cuba-web.com,www.tienda.cuba-web.com
+      - LETSENCRYPT_HOST=tienda.cuba-web.com,www.tienda.cuba-web.com
       - LETSENCRYPT_EMAIL=miltonleon86@gmail.com
