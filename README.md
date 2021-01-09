@@ -6,6 +6,7 @@
 ```$bash
 sudo chmod -R 777 prestashop/
 ```
+* In the docker-compose.dev remove the network part.
 
 * If you want to install this local don't forget to modify your local DNS in /etc/hosts 
 in order to user the same virtual host as docker-compose.dev.yml
