@@ -1,5 +1,11 @@
 # Prestashop - Docker - Nginx - PHP7.2
-* Mysql DB should be in a external container or host. 
+
+* I'll use this repo as a boilerplate for the next projects,
+probably some stuff here are not necessary for you, like 
+docker networks etc, feel free to fork this 
+and adjust it to your requirements.
+
+* Mysql DB should be in an external container or host. 
 
 * If you have any issue with permissions just do this:
 
@@ -8,7 +14,7 @@ sudo chmod -R 777 prestashop/
 ```
 * In the docker-compose.dev remove the network part.
 
-* If you want to install this local don't forget to modify your local DNS in /etc/hosts 
+* If you want to install this local, don't forget to modify your local DNS in /etc/hosts 
 in order to user the same virtual host as docker-compose.dev.yml
 
 # Steps
