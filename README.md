@@ -33,7 +33,6 @@ http://prestashop.cuba-web.develop
 ```$bash
 sudo chmod -R 777 prestashop/
 ```
-
 * change name from admin folder to admins.
 
 * This example is working here: https://tienda.cuba-web.com
@@ -41,3 +40,24 @@ sudo chmod -R 777 prestashop/
 # Important
 * This still a work in progress. 
 * Any help is welcome. 
+
+# SSL and HTTPS
+* In my case I'm using letsencrypt-nginx-proxy to handle
+https connections. In order to activate this on prestashop I
+had to go into the DB and on the table ps_configuration:
+```$bash
+Change:
+
+PS_SSL_ENABLED to 1
+PS_SSL_ENABLED_EVERYWHERE to 1
+```
+
+* After this I took a look at the nginx-conf and checked:
+```$bash
+fastcgi_param HTTPS on;
+```
+* If you don't need https just don't do the 2 steps above. And
+check that:
+```$bash
+fastcgi_param HTTPS off;
+```
