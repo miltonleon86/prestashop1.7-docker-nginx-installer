@@ -1,2 +1,5 @@
 .idea
 prestashop/var/cache/
+prestashop/var/logs/
+prestashop/supervisord.log
+prestashop/supervisord.pid

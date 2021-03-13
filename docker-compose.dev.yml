@@ -19,4 +19,4 @@ services:
     env_file:
       - env/development
     environment:
-      - VIRTUAL_HOST=prestashop.cuba-web.develop
+      - VIRTUAL_HOST=tienda.cuba-web.develop

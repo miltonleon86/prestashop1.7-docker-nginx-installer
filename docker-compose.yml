@@ -3,7 +3,7 @@ version: '3.4'
 networks:
   cubaleon:
     external:
-      name: proxy_cubaleon
+      name: cubaleon
 
 services:
   php_prestashop:
