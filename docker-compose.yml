@@ -8,7 +8,7 @@ networks:
 services:
   php_prestashop:
     build:
-      context: .
+      context: ""
       dockerfile: Dockerfile
     container_name: php-prestashop
     restart: always

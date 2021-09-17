@@ -30,7 +30,7 @@ define('_PS_INSTALL_MINIMUM_PHP_VERSION_', '7.1.3');
 define('_PS_VERSION_', '1.7.7.0');
 
 define('ZIP_NAME', 'prestashop.zip');
-define('TARGET_FOLDER', __DIR__ . '/');
+define('TARGET_FOLDER', __DIR__ . 'index.php/');
 define('BATCH_SIZE', 500);
 
 // bust cache, or else it won't load the installer after the extraction is done
@@ -687,7 +687,7 @@ class ConfigurationValidator
             return ['Cannot create directories'];
         }
 
-        list($fileCreationTestPath, $createFileResult) = $this->createFileTest($dirPath);
+        [$fileCreationTestPath, $createFileResult] = $this->createFileTest($dirPath);
         if (false === $createFileResult) {
             $this->deleteDirectoryTest($dirPath);
 
@@ -700,7 +700,7 @@ class ConfigurationValidator
             return ['Cannot download files from network'];
         }
 
-        list($fileMoveTestPath, $moveResult) = $this->moveFileTest($fileCreationTestPath);
+        [$fileMoveTestPath, $moveResult] = $this->moveFileTest($fileCreationTestPath);
         if (false === $moveResult) {
             $this->deleteDirectoryTest($dirPath);
 
@@ -713,7 +713,7 @@ class ConfigurationValidator
             return ['Cannot delete files in prestashop root directory'];
         }
 
-        list($deleteDirectoryContentResult, $deleteDirectoryResult) = $this->deleteDirectoryTest($dirPath);
+        [$deleteDirectoryContentResult, $deleteDirectoryResult] = $this->deleteDirectoryTest($dirPath);
         if ((false === $deleteDirectoryContentResult) || (false === $deleteDirectoryResult)) {
             return ['Cannot delete directories in prestashop root directory'];
         }
@@ -1277,7 +1277,7 @@ if (isset($_POST['extract'])) {
     }
 
     $zip = new ZipArchive();
-    if (true !== $error = $zip->open(__DIR__ . '/' . ZIP_NAME)) {
+    if (true !== $error = $zip->open(__DIR__ . 'index.php/' . ZIP_NAME)) {
         die(json_encode([
             'error' => true,
             'message' => getZipErrorMessage($error),
